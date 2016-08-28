@@ -1,0 +1,16 @@
+applications:
+- name: caddy
+  source: gs://rtctunnel-packages/caddy/linux_amd64/v1.tar.xz
+  service:
+    command: [caddy -agree -conf caddy.conf -email 'admin@rtctunnel.com']
+  files:
+    caddy.conf: >
+      operator.rtctunnel.com {
+	      proxy / localhost:5001
+      }
+- name: rtctunnel-operator
+  source: gs://rtctunnel-packages/rtctunnel-operator/linux_amd64/v1.tar.xz
+  service: 
+    command: [rtctunnel-operator]
+  environment:
+    PORT: 5001
