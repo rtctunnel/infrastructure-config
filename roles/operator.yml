@@ -1,6 +1,6 @@
 applications:
 - name: caddy
-  source: gs://rtctunnel-packages/caddy/linux_amd64/v1.tar.xz
+  source: gs://rtctunnel-packages/caddy/linux_amd64/v0.9.1.tar.gz
   service:
     command: caddy -agree -conf caddy.conf -email 'admin@rtctunnel.com'
   files:
