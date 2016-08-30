@@ -9,7 +9,7 @@ applications:
         proxy / localhost:5001
       }
 - name: rtctunnel-operator
-  source: gs://rtctunnel-packages/rtctunnel-operator/linux_amd64/v1.tar.xz
+  source: gs://rtctunnel-packages/rtctunnel-operator/linux_amd64/v0.1.tar.xz
   service: 
     command: rtctunnel-operator
   environment:
