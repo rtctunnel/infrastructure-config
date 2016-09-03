@@ -10,7 +10,7 @@ applications:
       }
 - name: rtctunnel-operator
   source: gs://rtctunnel-packages/rtctunnel-operator/linux_amd64/v0.1.tar.gz
-  service: 
+  service:
     command: rtctunnel-operator
   environment:
-    PORT: 5001
+    ADDR: 127.0.0.1:5001
